@@ -1,0 +1,1 @@
+G:\SarkisRepositoryCSharp\Repository\TestConsoleApp\TestConsoleApp\bin\Debug\TestConsoleApp.exe.config
