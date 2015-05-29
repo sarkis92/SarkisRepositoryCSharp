@@ -10,29 +10,48 @@ namespace BinarySearch
     {
         static void Main(string[] args)
         {
+            long[] nums;
 
-            int[] nums = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
-            int searchedNum = int.Parse(Console.ReadLine());
-            int midIndex;
-            int lowerIndex = 0, HighIndex = nums.Length - 1;
+            nums = Console.ReadLine().Split(' ').Select(long.Parse).ToArray();
 
+
+            long searchedNum = int.Parse(Console.ReadLine());
+            long midIndex;
+            long lowerIndex = 0, HighIndex = nums.Length - 1;
+            if (nums.Length == 1 && nums[0] == searchedNum)
+            {
+                Console.WriteLine(0);
+                return;
+            }
+            else if (nums.Length == 1 && nums[0] != searchedNum)
+            {
+                Console.WriteLine(-1);
+                return;
+            }
 
             while (true)
             {
                 midIndex = (HighIndex + lowerIndex) / 2;
 
-                
+
 
                 if (nums[midIndex] == searchedNum)
                 {
+                    long counter = midIndex;
+                    while (true)
+                    {
+                        counter--;
+                        if (nums[counter] == nums[midIndex])
+                        {
+                            midIndex = counter;
+                        }
+                        else break;
+                    }
                     Console.WriteLine(midIndex);
                     break;
+
                 }
-                else if ((lowerIndex == midIndex) && (nums[midIndex + 1] == searchedNum))
-                {
-                    Console.WriteLine(midIndex + 1);
-                    break;
-                }
+
                 else if (nums[midIndex] < searchedNum)
                 {
                     lowerIndex = midIndex;
@@ -42,12 +61,16 @@ namespace BinarySearch
                     HighIndex = midIndex;
                 }
 
-                if ((HighIndex == lowerIndex) || (lowerIndex == midIndex) && (nums[midIndex + 1] != searchedNum))
+                if ((HighIndex == lowerIndex + 1))
                 {
-                    Console.WriteLine(-1);
-                    break;
+                    Console.WriteLine(searchedNum == HighIndex ? HighIndex : -1);
                 }
             }
+
+
+
+
+
         }
     }
 }
