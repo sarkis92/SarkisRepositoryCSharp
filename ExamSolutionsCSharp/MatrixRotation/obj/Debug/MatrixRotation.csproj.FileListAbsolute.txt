@@ -1,0 +1,6 @@
+G:\SarkisRepositoryCSharp\Repository\ExamSolutionsCSharp\MatrixRotation\bin\Debug\MatrixRotation.exe.config
+G:\SarkisRepositoryCSharp\Repository\ExamSolutionsCSharp\MatrixRotation\obj\Debug\MatrixRotation.csprojResolveAssemblyReference.cache
+G:\SarkisRepositoryCSharp\Repository\ExamSolutionsCSharp\MatrixRotation\bin\Debug\MatrixRotation.exe
+G:\SarkisRepositoryCSharp\Repository\ExamSolutionsCSharp\MatrixRotation\bin\Debug\MatrixRotation.pdb
+G:\SarkisRepositoryCSharp\Repository\ExamSolutionsCSharp\MatrixRotation\obj\Debug\MatrixRotation.exe
+G:\SarkisRepositoryCSharp\Repository\ExamSolutionsCSharp\MatrixRotation\obj\Debug\MatrixRotation.pdb
