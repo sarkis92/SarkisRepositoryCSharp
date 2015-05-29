@@ -14,11 +14,11 @@ namespace PlusRemoval
 
             char[][] jagged;
             List<string> strings = new List<string>();
-            int sumChars = 0;
+            
             string letters = Console.ReadLine();
             while (letters != "END")
             {
-                sumChars += letters.Length;
+                //sumChars += letters.Length;
                 strings.Add(letters);
                 letters = Console.ReadLine();
             }
