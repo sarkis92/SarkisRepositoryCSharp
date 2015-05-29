@@ -21,15 +21,16 @@ namespace BinarySearch
             {
                 midIndex = (HighIndex + lowerIndex) / 2;
 
-                if ((lowerIndex == midIndex) && (nums[midIndex + 1] == searchedNum))
-                {
-                    Console.WriteLine(midIndex + 1);
-                    break;
-                }
+                
 
                 if (nums[midIndex] == searchedNum)
                 {
                     Console.WriteLine(midIndex);
+                    break;
+                }
+                else if ((lowerIndex == midIndex) && (nums[midIndex + 1] == searchedNum))
+                {
+                    Console.WriteLine(midIndex + 1);
                     break;
                 }
                 else if (nums[midIndex] < searchedNum)
@@ -41,7 +42,7 @@ namespace BinarySearch
                     HighIndex = midIndex;
                 }
 
-                if (HighIndex == lowerIndex)
+                if ((HighIndex == lowerIndex) || (lowerIndex == midIndex) && (nums[midIndex + 1] != searchedNum))
                 {
                     Console.WriteLine(-1);
                     break;
