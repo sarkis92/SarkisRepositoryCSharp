@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
-//using System.Globalization.CultureInfo;
+
 namespace PlusRemoval
 {
     class PlusRemoval
@@ -18,7 +18,6 @@ namespace PlusRemoval
             string letters = Console.ReadLine();
             while (letters != "END")
             {
-                //sumChars += letters.Length;
                 strings.Add(letters);
                 letters = Console.ReadLine();
             }
@@ -49,7 +48,6 @@ namespace PlusRemoval
                        string.Equals(jagged[i][j - 1].ToString(), jagged[i][j + 1].ToString(), StringComparison.OrdinalIgnoreCase))
                     {
                         pntsToRemove.Add(new Point(i, j));
-                        //jagged[i][j] = jagged[i - 1][j] = jagged[i + 1][j] = jagged[i][j - 1] = jagged[i][j + 1] = ' ';
                     }
                 }
             }
@@ -66,18 +64,14 @@ namespace PlusRemoval
                 count--;
             }
 
-            //char[][] outputArr = new char[strings.Count][];
-            //int elemPosition;
+           
             for (int i = 0; i < strings.Count; i++)
             {
-                //elemPosition = 0;
                 for (int j = 0; j < strings[i].Length; j++)
                 {
                     if (jagged[i][j] != ' ')
                     {
                         Console.Write(jagged[i][j]);
-                        //outputArr[i][elemPosition] = jagged[i][j];
-                        //elemPosition++;
                     }
                 }
                 Console.WriteLine();
