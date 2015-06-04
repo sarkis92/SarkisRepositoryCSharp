@@ -15,7 +15,6 @@ namespace ExtractHyperLinks
 
 
             string pattern = @"(?:<a)(?:[\s\n_0-9a-zA-Z=""()]*?.*?)(?:href([\s\n]*)?=(?:['""\s\n]*)?)([a-zA-Z:#\/._\-0-9!?=^+]*(\([""'a-zA-Z\s.()0-9]*\))?)(?:[\s\na-zA-Z=""()0-9]*.*?)?(?:\>)";
-           
 
             StringBuilder text = new StringBuilder();
             while (true)
@@ -35,6 +34,7 @@ namespace ExtractHyperLinks
            
             Match match = reg.Match(text.ToString());
             List<string> links = new List<string>();
+
             while (match.Success)
             {
                 // .....fake....lo6o
