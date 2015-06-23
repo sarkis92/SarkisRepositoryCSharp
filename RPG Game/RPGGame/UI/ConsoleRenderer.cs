@@ -1,0 +1,20 @@
+﻿
+namespace RPGGame.UI
+{
+    using System;
+
+    using Interfaces;
+    class ConsoleRenderer : IRenderer
+    {
+
+        public void WriteLine(string message, params object[] parameters)
+        {
+            Console.WriteLine(message, parameters);
+        }
+
+        public void Clear()
+        {
+            Console.Clear();
+        }
+    }
+}

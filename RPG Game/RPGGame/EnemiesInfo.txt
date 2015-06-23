@@ -1,0 +1,5 @@
+﻿Enemies:
+-F - Fairy (Damage 100, Health 60)
+-O - Ork (Damage 100, Health 150)
+-N - Ninja (Damage 150, Health 300)
+-T - Troll (Damage 75, Health 400)
